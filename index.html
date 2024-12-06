@@ -3,36 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Healthcare</title>
+    <title>Virtual Healthcare Services</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         label, input{
             display: block;
         }
+               
+
+
+/* Show the homeContent by default */
+#homeContent {
+    display: block;
+}
+
+        /* Highlight active tab */
+        .active {
+            background-color: #ddd;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Virtual Healthcare</h1>
+        <img src="images/Virtual-Healthcare-Services-Logo.png" alt="Virtual Healthcare Services Logo" id="logo">
+        <h1>Welcome to Virtual Healthcare Services</h1>
         <p>Your health, our priority.</p>
     </header>
 
-        <h2>Register new user</h2>
 
-        <form id="registrationForm">
+        <nav>
+            <a href="#" id="homeBtn">Home</a>
+            <a href="services.html" id="servicesBtn">Services</a>
+            <a href="contacts.html" id="contactBtn">Contact</a>
+            <a href="about.html" id="aboutBtn">About Us</a>
+            <a href="prescription.html" id="prescriptionBtn">prescription</a>
+            <a href="login.html">Login</a>
+        </nav>
+    <main>
+         <!-- Home Section -->
+         <div id="homeContent" class="content">
+            <h2>Virtual care at your fingertips</h2>
+            <p>Welcome to our platform. Explore our services and take control of your health.</p>
+        </div>
+          <!-- Register Section -->
+          <div id="registrationContent" class="content">
+        <h2>Register New User</h2>
+        <p>Sign up to access our healthcare services and stay connected with your health.</p>
+
+
             <form id="frm-register">
                 <label for="name">Name:</label>
-                <input type="text" id="name" required>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+    
                 <label for="email">Email:</label>
-                <input type="email" id="email" required>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    
                 <label for="password">Password:</label>
-                <input type="password" id="password" required>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+    
                 <button type="submit">Register</button>
             </form>
+           </div>
 
-    <footer>
-        <p>&copy; 2024 Virtual Healthcare. All rights reserved.</p>
-    </footer>
+             <!-- Virtual Consultation Section -->
+        <div id="virtualConsultationContent" class="content">
+                <h2>Our Virtual Healthcare Service</h2>
+                <img src="images/virtual consultation.jpeg" alt="virtual consultation" id="virtual consultation">
+                <p>Our platform offers convenient, reliable healthcare services at your fingertips. Whether you need a consultation, prescription, or follow-up care, we are here to help.</p>
+            </div>
+        </main>
+    
+        <footer>
+            <p>&copy; 2024 Virtual Healthcare Services. All rights reserved.</p>
+            <p>Follow us on:
+                <a href="#">Facebook</a> |
+                <a href="#">Twitter</a> |
+                <a href="#">Instagram</a>
+    
+            </p>
+        </footer>
+        
 
     <script src="script.js"></script> 
 </body>
